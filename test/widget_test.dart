@@ -3,9 +3,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:weather_report/app/app.dart';
 
 void main() {
-  testWidgets('Weather placeholder renders', (WidgetTester tester) async {
+  testWidgets('Weather home renders', (WidgetTester tester) async {
     await tester.pumpWidget(const App());
 
-    expect(find.text('Weather page placeholder'), findsOneWidget);
+    expect(find.text('Reykjavik'), findsOneWidget);
+    expect(find.text('Hourly Forecast'), findsOneWidget);
   });
 }
